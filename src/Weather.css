@@ -1,0 +1,45 @@
+.Weather .day {
+  font-size: 16px;
+  margin-bottom: 0px;
+  margin-top: 20px;
+  text-align: center;
+}
+.Weather .date {
+  font-size: 16px;
+  margin-bottom: 5px;
+  text-align: center;
+}
+.Weather .time,
+.Weather .am-pm {
+  display: inline-block;
+}
+.Weather .current-time {
+  font-size: 16px;
+  margin-top: 0;
+  text-align: center;
+}
+
+.Weather h1 {
+  font-size: 60px;
+  margin: 20px;
+  text-align: center;
+}
+.Weather h3 {
+  font-size: 32px;
+  margin-top: 40px;
+  text-align: center;
+  text-transform: lowercase;
+}
+.forecast-line {
+  margin-top: 40px;
+}
+
+.Weather .weather-icon {
+  display: block;
+  margin: 40px auto;
+  width: 200px;
+}
+
+.Weather .temperature {
+  font-size: 60px;
+}
