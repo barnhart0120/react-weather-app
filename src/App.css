@@ -43,18 +43,6 @@ body {
   font-family: "Montserrat", sans-serif;
   margin: 50px 0px 100px;
 }
-.card {
-  background-color: #fdfbfb;
-  border: none;
-  display: block;
-  margin: 0 auto;
-  max-width: 700;
-}
-
-.coded-by {
-  margin-top: 80px;
-  text-align: center;
-}
 
 .code-link {
   text-decoration: none;

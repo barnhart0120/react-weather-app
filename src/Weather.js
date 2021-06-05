@@ -28,95 +28,54 @@ export default function Weather() {
     highTemp: 75,
     humidity: 40,
     windSpeed: 8,
+    windUnit: "mph",
   };
 
   return (
     <div className="Weather">
-      <div className="card">
-        <div className="card-body">
-          <div className="row">
-            <div className="col-2"></div>
-            <div className="col-9">
-              <div className="container-fluid">
-                <form className="d-flex">
-                  <input
-                    className="form-control me-2"
-                    type="search"
-                    autoComplete="off"
-                    placeholder="Enter city name..."
-                    aria-label="Search"
-                  />
-                  <div className="col-1"></div>
-                </form>
-              </div>
-            </div>
-          </div>
-          <p className="day">{weatherData.day}</p>
-          <p className="date">{weatherData.date}</p>
-          <div className="current-time">
-            <p className="time">{weatherData.time}</p>
-            <p className="am-pm">{weatherData.amPm}</p>
-          </div>
-          <div className="row">
-            <div className="col-4"></div>
-            <div className="col-4">
-              <hr />
-            </div>
-            <div className="col-4"></div>
-          </div>
+      <input
+        type="search"
+        className="search-bar"
+        autoComplete="off"
+        placeholder="Enter city name..."
+      />
+      <p className="day">{weatherData.day}</p>
+      <p className="date">{weatherData.date}</p>
+      <p className="time">
+        {weatherData.time} {weatherData.amPm}
+      </p>
+      <hr className="horizontal-line" />
+      <h1>{weatherData.city}</h1>
+      <hr className="horizontal-line" />
+      <h3>{weatherData.condition}</h3>
+      <img
+        src={weatherData.imgUrl}
+        alt="{weatherData.condition}"
+        className="weather-icon"
+      />
 
-          <h1>{weatherData.city}</h1>
-          <div className="row">
-            <div className="col-4"></div>
-            <div className="col-4">
-              <hr />
-            </div>
-            <div className="col-4"></div>
-          </div>
-          <h3>{weatherData.condition}</h3>
-
-          <img
-            src={weatherData.imgUrl}
-            alt="{weatherData.condition}"
-            className="weather-icon"
-          />
-
-          <div className="row h-100 current-weather-data">
-            <div className="col-3"></div>
-            <div className="col-sm-4 my-auto">
-              <span className="temperature">
-                <span>{weatherData.temp}</span>°{" "}
-                <span className="temp-unit">F</span>
-              </span>
-            </div>
-
-            <div className="col-sm-3 my-auto weather-details">
-              low temp: <span>{weatherData.lowTemp}</span>°
-              <span className="low-unit">F</span>
-              <br />
-              high temp: <span>{weatherData.highTemp}</span>°
-              <span className="high-unit">F</span>
-              <br />
-              humidity: <span>{weatherData.humidity}</span>%<br />
-              wind: <span>{weatherData.windSpeed}</span>
-              <span className="wind-unit"> mph</span>
-            </div>
-            <div className="col-2"></div>
-          </div>
-
-          <div className="row forecast-line">
-            <div className="col-2"></div>
-            <div className="col-8">
-              <hr />
-            </div>
-            <div className="col-2"></div>
-          </div>
-
-          <div></div>
-        </div>
+      <div className="current-temperature">
+        {weatherData.temp}° <span className="temp-unit">F</span>
       </div>
 
-      <p className="coded-by">
+      <div className="current-weather-data">
+        <ul>
+          <li>
+            low temp: {weatherData.lowTemp}° <span className="low-unit">F</span>
+          </li>
+          <li>
+            high temp: {weatherData.highTemp}°{" "}
+            <span className="high-unit">F</span>
+          </li>
+          <li>humidity: {weatherData.humidity}%</li>
+          <li>
+            wind: {weatherData.windSpeed} {weatherData.windUnit}
+          </li>
+        </ul>
+      </div>
+      <hr className="bottom-horizontal-line" />
+
+      <div className="coded-by">
         <a
           href="https://github.com/barnhart0120/Vanilla-Weather-App"
           target="_blank"
@@ -129,7 +88,7 @@ export default function Weather() {
         Danielle Barnhart
         <br />
         2021
-      </p>
+      </div>
     </div>
   );
 }

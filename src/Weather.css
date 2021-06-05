@@ -1,37 +1,50 @@
+.Weather .search-bar {
+  width: 300px;
+  height: 30px;
+  margin-bottom: 20px;
+}
+
 .Weather .day {
   font-size: 16px;
-  margin-bottom: 0px;
+  margin-bottom: 3px;
   margin-top: 20px;
   text-align: center;
 }
 .Weather .date {
   font-size: 16px;
-  margin-bottom: 5px;
+  margin-top: 0px;
+  margin-bottom: 4px;
   text-align: center;
 }
-.Weather .time,
-.Weather .am-pm {
+.Weather .time {
   display: inline-block;
-}
-.Weather .current-time {
   font-size: 16px;
-  margin-top: 0;
+  margin-top: 0px;
   text-align: center;
+  margin-bottom: 30px;
+}
+
+.Weather .horizontal-line {
+  max-width: 180px;
+}
+.Weather .bottom-horizontal-line {
+  margin-top: 150px;
+  margin-bottom: 25px;
+  max-width: 100px;
 }
 
 .Weather h1 {
   font-size: 60px;
-  margin: 20px;
+  margin: 40px 0px 40px 0px;
   text-align: center;
+  font-weight: 400;
 }
 .Weather h3 {
   font-size: 32px;
-  margin-top: 40px;
+  margin-top: 60px;
   text-align: center;
   text-transform: lowercase;
-}
-.forecast-line {
-  margin-top: 40px;
+  font-weight: 300;
 }
 
 .Weather .weather-icon {
@@ -40,6 +53,19 @@
   width: 200px;
 }
 
-.Weather .temperature {
-  font-size: 60px;
+.Weather .current-temperature {
+  font-size: 70px;
+  display: inline-block;
+  padding-right: 40px;
+  vertical-align: middle;
+}
+
+.Weather .current-weather-data {
+  display: inline-block;
+  padding-left: 40px;
+  vertical-align: middle;
+}
+
+ul {
+  list-style-type: none;
 }
